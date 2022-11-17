@@ -61,6 +61,12 @@ SELECT city from sale where city = 'Campbell';
 
 SELECT * FROM sale;
 
+CREATE DATABASE movies;
+show databases;
+use movies;
+
+
+
 CREATE TABLE movies(id int, name varchar(50), ticket_price int, location varchar(50), hero varchar(50), budget bigint);
 SELECT * FROM movies;
 INSERT INTO movies VALUES(1,'Kantara',200,'Navarang','Risheb Shetty',500);
@@ -96,4 +102,11 @@ COMMIT;
 ROLLBACK;
 
 /* create table with 10 columns 10 datas for each n evry update column*/
+
+CREATE TABLE movies_dup As SELECT *FROM movies;
+SELECT *FROM movies_dup;
+SELECT *FROM movies where director='Annkarmel' AND id=3;
+
+SELECT *FROM movies where id=1 OR  id=2 or id=3;
+
 
